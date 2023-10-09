@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller</title>
+</head>
+<body>
+    <section id="cuerpo">
+        <form name="prueba_taller" id="prueba_taller"action="" method="post" enctype="multipart/form-data">
+
+            <label for="usuario">Tu correo de usuario</label>
+            <input type="email" name="usuario" id="usuario" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" maxlength="32" tabindex="1" required>
+
+            <label for="contrasena">Tu contraseña</label>
+            <input type="password" name="contrasena" id="contrasena" required pattern="(?=.*[0-9])(?=.*[!@#$%^&*])[A-Za-z0-9!@#$%^&*]{8,}" tabindex="2" required>
+
+
+            <button type="submit">Ingresar</button>
+
+
+        </form>
+    </section>
+</body>
+</html>
