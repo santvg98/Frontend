@@ -1,0 +1,23 @@
+* 
+{
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+
+body, html
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    font-family: Verdana;
+    font-size: 13px;
+}
+
+main#cuerpo
+{
+    background-color:rgb(250, 250, 250);
+    color: #111;
+}
