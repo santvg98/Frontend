@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototipo 01 | Etiquetado HTML5</title>
+</head>
+<body>
+
+    <main id="cuerpo">
+
+        <form name="forma_prueba" id="forma_prueba" method="post" action="sentinela" onsubmit="telon()">
+
+            <label for="nom_usuario">Tu nombre de usuario</label>
+
+            <input type="email" name="nom_usuario" id="nom_usuario" inputmode="email" required>
+
+            <label for="clave_usuario">Tu clave secreta</label>
+
+            <input type="password" name="clave_usuario" id="clave_usuario" inputmode="tel" pattern="[0-9]{10}" required>
+
+            <button type="submit">ENTRAR</button>
+
+        </form>
+
+
+    </main>
+
+</body>
+</html>
