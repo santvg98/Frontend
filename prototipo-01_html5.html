@@ -13,18 +13,25 @@
 
         <form name="forma_prueba" id="forma_prueba" method="post" action="sentinela" onsubmit="telon()">
 
+            <div class="cont-campos">
+
             <label for="nom_usuario">Tu nombre de usuario</label>
 
             <input type="email" name="nom_usuario" id="nom_usuario" inputmode="email" required>
 
+            </div>
+
+            <div class="cont-campos">
+                
             <label for="clave_usuario">Tu clave secreta</label>
 
             <input type="password" name="clave_usuario" id="clave_usuario" inputmode="tel" pattern="[0-9]{10}" required>
 
+            </div>
+
             <button type="submit">ENTRAR</button>
 
         </form>
-
 
     </main>
 
