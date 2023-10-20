@@ -1,24 +1,106 @@
-*
+* 
 {
     box-sizing: border-box;
     transition: all 0.3s;
 }
 
-body, html
+body, html 
 {
     margin: 0;
     padding: 0;
 }
 
-body
+body 
 {
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 13px;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    background-color: #f0f0f0;
 }
 
-main#estructura
+main#estructura 
 {
-    background-color: rgb(22, 10, 58);
-    height: 100vh;
-    width: 100vw;
+    background-color: #f9f9f9; 
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333; 
 }
+
+#formulario_prueba 
+{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: clamp(300px, 92%, 420px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+    #formulario_prueba h1 
+    {
+        font-size: 24px;
+        color: #333; 
+        margin: 0 0 20px;
+    }
+
+    #formulario_prueba label 
+    {
+        color: #333; 
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    #formulario_prueba input 
+    {
+        background-color: #f5f5f5; 
+        border: none;
+        border-left: 4px solid #666; 
+        color: #333; 
+        margin: 0 0 15px;
+        padding: 10px;
+        width: 100%;
+        border-radius: 4px;
+        transition: transform 0.3s;
+    }
+
+        #formulario_prueba input:focus 
+        {
+            transform: scale(1.05); 
+        }
+
+    #formulario_prueba button 
+    {
+        background: #ff5733; 
+        border: none;
+        border-radius: 4px;
+        font-weight: bold;
+        color: #fff; 
+        cursor: pointer;
+        margin: 0;
+        padding: 13px 21px;
+        align-self: flex-end;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+        #formulario_prueba button:hover 
+        {
+            background: #f76e41; 
+            color: #fff; 
+        }
+
+    #formulario_prueba select 
+    {
+        background-color: #f5f5f5; 
+        border: none;
+        border-left: 4px solid #666; 
+        color: #333; 
+        margin: 0 0 15px;
+        padding: 10px;
+        width: 100%;
+        border-radius: 4px;
+    }
+
+
