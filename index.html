@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repaso HTML 5</title>
+
+    <link rel="stylesheet" href="archivos_repaso/formato_repaso.css">
+    <script src=""></script>
+</head>
+<body>
+
+    <main id="cuerpo">
+        <figure id="marca">
+            <img src="archivos_repaso/simbolo.png" alt="oakley marca">
+        </figure>
+        <form name="forma_acceso" id="forma_acceso" method="post">
+            <input type="text" name="num_usuario" id="num_usuario" class="campo-blanco" pattern="[A-Z0-9]{6,15}" maxlength="15" minlength="6" inputmode="numeric" tabindex="1" required>
+
+            <input type="password" name="palabra_usuario" id="palabra_usuario" pattern="[0-9]{10}" maxlength="10" minlength="10" inputmode="tel" tabindex="2" required>
+
+            <button type="submit" id="btn_entrar">LOGIN</button>
+        </form>
+        <p>ARCANO 2023</p>
+    </main>
+
+</body>
+</html>
