@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokio HOTEL | Panel de Control v1</title>
+
+    <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='formato_panel.css') }}">
+
+</head>
+<body>
+
+    <main id="ppal">
+
+        <header id="cabezote">
+
+            <figure id="marca"><img src="{{ url_for('static', filename='panel_componentes/logo.png') }}" alt="tokio hotel marca"></figure>
+
+            <nav id="menu_admor">
+                <i class="lni lni-menu" id="disparador"></i>
+                <ul id="opcs_menu">
+                    <li><a href="#">RESERVAS</a></li>
+                    <li><a href="#">HÁBITATS</a></li>
+                    <li><a href="#">CLIENTES</a></li>
+                    <li><a href="#">VEHÍCULOS</a></li>
+                    <li><a href="#">INVENTARIOS</a></li>
+                    <li><a href="#">CERRAR SESIÓN</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <section id="cont_paneles">
+
+            <article class="mosaico" id="reservas">
+
+                <h2>Reservas</h2>
+
+                <form id="forma_reserva" name="forma_reserva" action="/buscarReserva" method="post">
+
+                    <input type="text" name="campo_identificador" id="campo_identificador" pattern="[A-Z0-9]{6,15}" maxlength="15" minlength="6" title="Lo que has digitado no es una reserva o un número de identidad" placeholder="Cédula / Reserva" required>
+
+                    <button type="submit" id="btn_reservas">
+                        <i class="lni lni-keyword-research"></i>
+                    </button>
+
+                </form>
+
+                <a href="/crearReserva">
+                    <i class="lni lni-circle-plus"></i>
+                    RESERVA
+                </a>
+
+                <p>{{ mensaje_reserva }}</p>
+
+            </article>
+
+            <article class="mosaico" id="clientes">
+
+                <h2>Clientes</h2>
+
+                <form id="forma_cliente" name="forma_cliente" action="/buscarCliente" method="post">
+
+                    <input type="text" name="campo_id_cliente" id="campo_id_cliente" pattern="[A-Z0-9]{6,15}" maxlength="15" minlength="6" title="Lo que has digitado no es un número de identidad" placeholder="C.C. / Pas / C.E. / PEP" required>
+
+                    <button type="submit" id="btn_clientes">
+                        <i class="lni lni-keyword-research"></i>
+                    </button>
+
+                </form>
+
+                <a href="/crearCliente">
+                    <i class="lni lni-circle-plus"></i>
+                    CLIENTE
+                </a>
+
+            </article>
+
+            <article class="mosaico" id="ventas">
+
+                <h2>Ventas</h2>
+
+                <form id="forma_venta" name="forma_venta" action="/buscarVentasHabitat" method="post">
+
+                    <input type="text" name="campo_habitat" id="campo_habitat" pattern="[A-Z0-9]{3,5}" maxlength="5" minlength="3" title="Lo que has digitado no es un número de habitat" placeholder="103 | VIP21 | CA07" required>
+
+                    <button type="submit" id="btn_ventas">
+                        <i class="lni lni-keyword-research"></i>
+                    </button>
+
+                </form>
+
+                <a href="/crearVenta">
+                    <i class="lni lni-circle-plus"></i>
+                    VENTA
+                </a>
+
+            </article>
+
+
+        </section>
+
+    </main>
+
+</body>
+</html>
