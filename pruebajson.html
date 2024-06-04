@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso de Prueba</title>
+
+    <script src="funciones.js"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            transition: all 0.7s;
+        }
+        button {
+            background-color: blueviolet;
+            color: blue;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 17px;
+            margin: 11px 21px 32px;
+            padding: 13px 18px;
+            width: clamp(280px, 92%, 420px );
+            border: none;
+            display: none;
+        }
+        input {
+            display: block;
+        }
+        #pw_usuario{
+            display: none;
+        }
+        .campo {
+            background-color: lightgrey;
+            color: darkslateblue;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 17px;
+            margin: 11px 21px 32px;
+            padding: 13px 18px;
+            width: clamp(280px, 92%, 420px );
+        }
+    </style>
+</head>
+<body>
+    <form action="custodio" method="post">
+        <input type="text" name="nom_usuario" id="nom_usuario" pattern="[0-9{6,15}]" placeholder="Usuario" title="identificación" title="Solo números" maxlength="15" minlength="6" required tabindex="1">
+
+        <input type="password" name="pw_usuario" id="pw_usuario" pattern="[0-9]{8,10}" maxlength="10" minlength="8" title="Solo números" tabindex="2" required class="campo">
+
+        <button type="submit" id="btn_acceso">Entrar</button>
+    </form>
+</body>
+</html>
